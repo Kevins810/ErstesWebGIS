@@ -12,7 +12,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([519836.078297, 5786934.728404, 584130.955087, 5821750.728404], map.getSize());
+map.getView().fit([480913.556301, 5676431.823410, 492573.917537, 5682474.089291], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -905,17 +905,6 @@ document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 //layer search
 
-var searchLayer = new SearchLayer({
-    layer: lyr_Polygone_2,
-    colName: 'Fläche',
-    zoom: 10,
-    collapsed: true,
-    map: map
-});
-map.addControl(searchLayer);
-document.getElementsByClassName('search-layer')[0].getElementsByTagName('button')[0].className += ' fa fa-binoculars';
-document.getElementsByClassName('search-layer-input-search')[0].placeholder = 'Search feature ...';
-    
 
 //scalebar
 
